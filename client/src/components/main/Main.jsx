@@ -109,7 +109,7 @@ const Main = () => {
           </span>
 
           <span className='m-5'>
-              GIT
+              Git
           </span>
 
           <span className='m-5'>
