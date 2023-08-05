@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+body {
+  margin: 10px;
+  font-family: 'Electrolize', sans-serif;
+  background-color: rgb(87, 79, 79);
+}
