@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import eraybahcegulu from "../../eraybahcegulu.jpg"
@@ -14,6 +15,9 @@ import { Steps } from 'antd';
 
 const description = '';
 const Main = () => {
+
+
+
 
   return (
     <div className='bg-gray-400 header min-w-min h-max w-8/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
@@ -33,13 +37,9 @@ const Main = () => {
             <h2>EDUCATION</h2>
             <Steps
               progressDot
-              current={3}
+              current={2}
               direction="vertical"
               items={[
-                {
-                  title: 'Kütahya Koleji',
-                  description: '2017',
-                },
                 {
                   title: 'Doğuş Üniversitesi • Endüstri Mühendisliği',
                   description: '2018',
