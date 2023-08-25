@@ -2,7 +2,7 @@ import Main from "./components/main/Main.jsx";
 import ReactGA from 'react-ga';
 
 function initalGA(){
-  ReactGA.initalize('UA-282892030-1');
+  ReactGA.initialize('UA-282892030-1');
   ReactGA.pageview('homePage')
 }
 
