@@ -1,14 +1,14 @@
 import Main from "./components/main/Main.jsx";
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
 
-function initalGA(){
-  ReactGA.initialize('UA-282892030-1');
-  ReactGA.pageview('homePage');
-}
-
 function App() {
-  initalGA()
+
+  useEffect(() =>{
+    ReactGA.initialize('UA-282892030-1');
+    ReactGA.pageview('/app');
+  },[])
+
   return (
     <div>
       <Main></Main>

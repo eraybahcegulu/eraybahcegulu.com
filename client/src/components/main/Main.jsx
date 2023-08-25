@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactGA from 'react-ga';
 import { Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import eraybahcegulu from "../../eraybahcegulu.jpg"
@@ -13,18 +12,11 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import { Steps } from 'antd';
 
-function initalGA(){
-  ReactGA.initialize('UA-282892030-1');
-  ReactGA.pageview('homePage');
-}
+
 
 
 const description = '';
 const Main = () => {
-
-  initalGA()
-
-
   return (
     <div className='bg-gray-400 header min-w-min h-max w-8/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
       <main className=' items-center p-2 md:p-4'>
