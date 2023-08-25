@@ -1,13 +1,12 @@
 import Main from "./components/main/Main.jsx";
 import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 function App() {
 
-  useEffect(() =>{
-    ReactGA.initialize('UA-282892030-1');
-    ReactGA.pageview('/app');
-  },[])
+  const TRACKING_ID = 'UA-282892030-1';
+  ReactGA.initialize(TRACKING_ID);
+  ReactGA.send({ hitType: "pageview", page: "/"});
 
   return (
     <div>
