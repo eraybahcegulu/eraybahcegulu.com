@@ -4,10 +4,14 @@ import ReactGA from 'react-ga4';
 
 function App() {
 
-  const TRACKING_ID = 'UA-282892030-1';
-  ReactGA.initialize(TRACKING_ID);
-  ReactGA.send({ hitType: "pageview", page: "/"});
+  ReactGA.initialize([
+    {
+      trackingId: "UA-282892030-1",
+    },
+  ]);
 
+  ReactGA.send({ hitType: "pageview", page: "/my-path", title: "Custom Title" });
+  
   return (
     <div>
       <Main></Main>
