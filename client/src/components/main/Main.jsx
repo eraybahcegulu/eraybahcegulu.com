@@ -11,12 +11,13 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import ReactGA from 'react-ga4';
 import { Steps } from 'antd';
+import { Alert, Space, Spin } from 'antd';
 
 ReactGA.initialize("G-5N3FNKYL58");
 
 
-ReactGA.send({ 
-  hitType: "pageview", 
+ReactGA.send({
+  hitType: "pageview",
   page: window.location.pathname,
 });
 
@@ -80,56 +81,64 @@ const Main = () => {
           <h2>TECHNOLOGIES I USE</h2>
           <div className='flex-auto mt-2'>
 
-          <span className='m-5'> 
+            <span className='m-5'>
               Arduino
-          </span>
+            </span>
 
-          <span className='m-5'> 
+            <span className='m-5'>
               HTML
-          </span>
+            </span>
 
-          <span className='m-5'>
+            <span className='m-5'>
               CSS
-          </span>
+            </span>
 
-          <span className='m-5'> 
+            <span className='m-5'>
               WinForms
-          </span>
+            </span>
 
-          <span className='m-5'>
+            <span className='m-5'>
               Flutter
-          </span>
+            </span>
 
-          <span className='m-5'>
+            <span className='m-5'>
               React
-          </span>
+            </span>
 
-          <span className='m-5'>
+            <span className='m-5'>
               NodeJS
-          </span>
+            </span>
 
-          <span className='m-5'>
+            <span className='m-5'>
               ExpressJS
-          </span>
+            </span>
 
-          <span className='m-5'>
+            <span className='m-5'>
               Git
-          </span>
+            </span>
 
-          <span className='m-5'>
+            <span className='m-5'>
               MSSQL
-          </span>
+            </span>
 
-          <span className='m-5'>
+            <span className='m-5'>
               Unity
-          </span>
+            </span>
 
           </div>
 
         </div>
 
 
-        <div className='comm mt-10'>
+        <div className='mt-10'>
+          <Spin tip="Güncelleniyor" >
+            <div className="content" />
+          </Spin>
+        </div>
+
+
+
+        <div className='comm mt-20'>
 
           <a href="https://twitter.com/itsErayizm" target="_blank" className='m-5'>
             <FontAwesomeIcon icon={faXTwitter} beat size="2xl" style={{ color: "#3b64ab", }} />
