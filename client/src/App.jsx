@@ -1,9 +1,10 @@
 import Main from "./components/main/Main.jsx";
+import React from 'react';
 import ReactGA from 'react-ga4';
 
 function App() {
 
-  ReactGA.initialize("G-RC66N4F76Z");
+  ReactGA.initialize("G-5N3FNKYL58");
 
 
   ReactGA.send({ 

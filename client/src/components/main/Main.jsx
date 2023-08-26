@@ -9,10 +9,16 @@ import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-
+import ReactGA from 'react-ga4';
 import { Steps } from 'antd';
 
+ReactGA.initialize("G-5N3FNKYL58");
 
+
+ReactGA.send({ 
+  hitType: "pageview", 
+  page: window.location.pathname,
+});
 
 
 const description = '';
