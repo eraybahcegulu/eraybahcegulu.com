@@ -6,7 +6,7 @@ function App() {
 
   ReactGA.initialize([
     {
-      trackingId: "UA-282892030-1",
+      trackingId: "G-RC66N4F76Z",
     },
   ]);
 
