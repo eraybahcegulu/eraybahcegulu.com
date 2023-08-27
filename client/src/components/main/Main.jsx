@@ -1,17 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import eraybahcegulu from "../../eraybahcegulu.jpg"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import firebase from 'firebase/app';
+import 'firebase/database';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import ReactGA from 'react-ga4';
 import { Steps } from 'antd';
-import { Alert, Space, Spin } from 'antd';
+import { Spin, Button, Form, Input } from 'antd';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAqfnVVx7jcIP-tbtdYp7k3jsMYTWzaes0",
+  authDomain: "eraybahcegulu-78564.firebaseapp.com",
+  projectId: "eraybahcegulu-78564",
+  storageBucket: "eraybahcegulu-78564.appspot.com",
+  messagingSenderId: "888850986805",
+  appId: "1:888850986805:web:142d49753e0179602d3e7c"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const layout = {
+  labelCol: {
+    span: 8,
+  },
+  wrapperCol: {
+    span: 16,
+  },
+};
+
+/* eslint-disable no-template-curly-in-string */
+const validateMessages = {
+  required: 'Bir ${label} giriniz.',
+  number: {
+    range: '${label} en fazla ${max} karakter olabilir.',
+  },
+};
+/* eslint-enable no-template-curly-in-string */
+
+const onFinish = (values) => {
+  console.log(values);
+};
 
 ReactGA.initialize("G-5N3FNKYL58");
 
@@ -24,6 +58,29 @@ ReactGA.send({
 
 const description = '';
 const Main = () => {
+  const onFinish = (values) => {
+    console.log(values);
+
+    // Form verilerini Firebase Realtime Database'e iletilmesi
+    firebase.database().ref('formSubmissions').push(values);
+  };
+
+  const [loadings, setLoadings] = useState([]);
+  const enterLoading = (index) => {
+    setLoadings((prevLoadings) => {
+      const newLoadings = [...prevLoadings];
+      newLoadings[index] = true;
+      return newLoadings;
+    });
+    setTimeout(() => {
+      setLoadings((prevLoadings) => {
+        const newLoadings = [...prevLoadings];
+        newLoadings[index] = false;
+        return newLoadings;
+      });
+    }, 6000);
+  };
+
   return (
     <div className='bg-gray-400 header min-w-min h-max w-8/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
       <main className=' items-center p-2 md:p-4'>
@@ -77,6 +134,57 @@ const Main = () => {
           </div>
         </div>
 
+        <div className='ml-20 mt-10'>
+          <Form
+            {...layout}
+            name="nest-messages"
+            onFinish={onFinish}
+            style={{
+              maxWidth: 620,
+            }}
+            validateMessages={validateMessages}
+          >
+            <Form.Item
+              name={['user', 'name']}
+              label="Ad"
+              rules={[
+                {
+                  type: 'string',
+                  required: true,
+                  message: validateMessages.required,
+                },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+
+            <Form.Item 
+            name={['user', 'introduction']} 
+            label="Mesaj" 
+            rules={[
+              {
+                required: true,
+                type: 'string', // Veri tipini belirtmek önemlidir
+                max: 40,
+                message: validateMessages.number.range, // `number.range` hatası iletisini kullanıyoruz
+              },
+            ]}
+            >
+              <Input.TextArea />
+            </Form.Item>
+            <Form.Item
+              wrapperCol={{
+                ...layout.wrapperCol,
+                offset: 8,
+              }}
+            >
+        <Button type="primary" loading={loadings[0]} onClick={() => enterLoading(0)}>
+          Gönder
+        </Button>
+            </Form.Item>
+          </Form>
+        </div>
+
         <div className='technologies w-auto h-auto text-center mt-12'>
           <h2>TECHNOLOGIES I USE</h2>
           <div className='flex-auto mt-2'>
@@ -128,6 +236,8 @@ const Main = () => {
           </div>
 
         </div>
+
+        
 
 
         <div className='mt-10'>
