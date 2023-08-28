@@ -16,6 +16,9 @@ import FirebaseComponent from './FirebaseComponent.jsx';
 
 
 
+
+
+
 const layout = {
   labelCol: {
     span: 8,
@@ -40,7 +43,11 @@ const description = '';
 const Main = () => {
 
   return (
+
+
     <div className='bg-gray-400 header min-w-min h-max w-6/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
+
+
       <main className=' items-center p-2 md:p-4'>
         <div className='avatar'>
           <Avatar shape="square" size={300} src={eraybahcegulu} icon={<UserOutlined />} />
@@ -51,6 +58,8 @@ const Main = () => {
 
           </h2>
         </div>
+
+
 
         <div className='about text-left flex m-auto mt-10 ml-10'>
           <div className='w-2/4'>
@@ -95,7 +104,7 @@ const Main = () => {
         <FirebaseComponent></FirebaseComponent>
 
         <div className='mt-10'>
-          <Spin tip="Güncelleniyor" >
+          <Spin tip="UPDATING" >
             <div className="content" />
           </Spin>
         </div>

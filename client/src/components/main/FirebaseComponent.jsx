@@ -39,7 +39,9 @@ function FirebaseComponent() {
   }, [notification]);
 
   return (
-    <div className="firebase-container">
+
+    <fieldset className="firebase-container">
+      <legend className='legend'>CONTACT</legend>
       <input
         type="text"
         value={data.box1}
@@ -54,12 +56,14 @@ function FirebaseComponent() {
         placeholder="Mesaj"
       />
       <button onClick={handleButtonClick} className="firebase-button">
-        Mesaj Gönder
+        Send Message
       </button>
       <p className={`notification ${notification ? 'show' : 'hide'}`}>
         {notification}
       </p>
-    </div>
+
+    </fieldset>
+
   );
 }
 

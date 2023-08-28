@@ -3,7 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin: 20px auto;
+  border: 2px solid #437cd3; /* Sınır stilini ve rengini belirleyebilirsiniz */
+  padding: 10px; /* İsteğe bağlı iç içe alan (padding) */
+  width: 400px;
+}
+
+.legend{
+  text-align: left; /* Başlığı sola hizala */
 }
 
 .firebase-input {
