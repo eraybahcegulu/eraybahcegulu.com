@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import database from '../../firebase';
-import { ref, set } from 'firebase/database';
-import './FirebaseComponent.css'; 
+import { getDatabase, ref, set, push } from 'firebase/database';
+import './FirebaseComponent.css';
 
 function FirebaseComponent() {
   const [data, setData] = useState({ box1: '', box2: '' });
@@ -11,9 +10,19 @@ function FirebaseComponent() {
     if (data.box1.trim() === '' || data.box2.trim() === '') {
       setNotification('Lütfen boş alan bırakmayın.');
     } else {
-      const dataRef = ref(database, data.box1);
-      set(dataRef, data.box2);
-      setNotification('Mesaj Gönderildi.');
+      const databaseRef = ref(getDatabase());
+      const newDataRef = push(databaseRef); // Yeni bir eşsiz anahtar oluştur
+      const now = new Date();
+
+      const newData = {
+        adSoyad: data.box1,
+        mesaj: data.box2,
+        tarih: now.toISOString(),
+      };
+
+      set(newDataRef, newData).then(() => {
+        setNotification('Mesaj Gönderildi.');
+      });
     }
   };
 
