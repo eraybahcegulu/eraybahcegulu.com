@@ -12,6 +12,9 @@ import ReactGA from 'react-ga4';
 import { Steps } from 'antd';
 import { Spin, Button, Form, Input } from 'antd';
 
+import FirebaseComponent from './FirebaseComponent.jsx';
+
+
 
 const layout = {
   labelCol: {
@@ -22,18 +25,7 @@ const layout = {
   },
 };
 
-/* eslint-disable no-template-curly-in-string */
-const validateMessages = {
-  required: 'Bir ${label} giriniz.',
-  number: {
-    range: '${label} en fazla ${max} karakter olabilir.',
-  },
-};
-/* eslint-enable no-template-curly-in-string */
 
-const onFinish = (values) => {
-  console.log(values);
-};
 
 ReactGA.initialize("G-5N3FNKYL58");
 
@@ -47,24 +39,8 @@ ReactGA.send({
 const description = '';
 const Main = () => {
 
-  const [loadings, setLoadings] = useState([]);
-  const enterLoading = (index) => {
-    setLoadings((prevLoadings) => {
-      const newLoadings = [...prevLoadings];
-      newLoadings[index] = true;
-      return newLoadings;
-    });
-    setTimeout(() => {
-      setLoadings((prevLoadings) => {
-        const newLoadings = [...prevLoadings];
-        newLoadings[index] = false;
-        return newLoadings;
-      });
-    }, 6000);
-  };
-
   return (
-    <div className='bg-gray-400 header min-w-min h-max w-8/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
+    <div className='bg-gray-400 header min-w-min h-max w-6/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
       <main className=' items-center p-2 md:p-4'>
         <div className='avatar'>
           <Avatar shape="square" size={300} src={eraybahcegulu} icon={<UserOutlined />} />
@@ -114,57 +90,6 @@ const Main = () => {
               ]}
             />
           </div>
-        </div>
-
-        <div className='ml-20 mt-10'>
-          <Form
-            {...layout}
-            name="nest-messages"
-            onFinish={onFinish}
-            style={{
-              maxWidth: 620,
-            }}
-            validateMessages={validateMessages}
-          >
-            <Form.Item
-              name={['user', 'name']}
-              label="Ad"
-              rules={[
-                {
-                  type: 'string',
-                  required: true,
-                  message: validateMessages.required,
-                },
-              ]}
-            >
-              <Input />
-            </Form.Item>
-
-            <Form.Item 
-            name={['user', 'introduction']} 
-            label="Mesaj" 
-            rules={[
-              {
-                required: true,
-                type: 'string', // Veri tipini belirtmek önemlidir
-                max: 40,
-                message: validateMessages.number.range, // `number.range` hatası iletisini kullanıyoruz
-              },
-            ]}
-            >
-              <Input.TextArea />
-            </Form.Item>
-            <Form.Item
-              wrapperCol={{
-                ...layout.wrapperCol,
-                offset: 8,
-              }}
-            >
-        <Button type="primary" loading={loadings[0]} onClick={() => enterLoading(0)}>
-          Gönder
-        </Button>
-            </Form.Item>
-          </Form>
         </div>
 
         <div className='technologies w-auto h-auto text-center mt-12'>
@@ -219,8 +144,8 @@ const Main = () => {
 
         </div>
 
-        
 
+        <FirebaseComponent></FirebaseComponent>
 
         <div className='mt-10'>
           <Spin tip="Güncelleniyor" >
