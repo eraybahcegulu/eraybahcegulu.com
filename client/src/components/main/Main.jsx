@@ -4,8 +4,6 @@ import { UserOutlined } from '@ant-design/icons';
 import eraybahcegulu from "../../eraybahcegulu.jpg"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import firebase from 'firebase/app';
-import 'firebase/database';
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
@@ -14,16 +12,6 @@ import ReactGA from 'react-ga4';
 import { Steps } from 'antd';
 import { Spin, Button, Form, Input } from 'antd';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyAqfnVVx7jcIP-tbtdYp7k3jsMYTWzaes0",
-  authDomain: "eraybahcegulu-78564.firebaseapp.com",
-  projectId: "eraybahcegulu-78564",
-  storageBucket: "eraybahcegulu-78564.appspot.com",
-  messagingSenderId: "888850986805",
-  appId: "1:888850986805:web:142d49753e0179602d3e7c"
-};
-
-firebase.initializeApp(firebaseConfig);
 
 const layout = {
   labelCol: {
@@ -58,12 +46,6 @@ ReactGA.send({
 
 const description = '';
 const Main = () => {
-  const onFinish = (values) => {
-    console.log(values);
-
-    // Form verilerini Firebase Realtime Database'e iletilmesi
-    firebase.database().ref('formSubmissions').push(values);
-  };
 
   const [loadings, setLoadings] = useState([]);
   const enterLoading = (index) => {
