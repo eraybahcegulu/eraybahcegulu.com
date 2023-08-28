@@ -2,7 +2,7 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database'; // Değişiklik burada
 
-const config = {
+const firebaseConfig  = {
     apiKey: "AIzaSyAqfnVVx7jcIP-tbtdYp7k3jsMYTWzaes0",
     authDomain: "eraybahcegulu-78564.firebaseapp.com",
     databaseURL: "https://eraybahcegulu-78564-default-rtdb.firebaseio.com",
@@ -13,7 +13,7 @@ const config = {
 };
 
 // Firebase'i başlatın
-const app = initializeApp(config);
-const database = getDatabase(app); // Değişiklik burada
+const app = initializeApp(firebaseConfig);
+const databaseRef  = getDatabase(app); // Değişiklik burada
 
-export default database; // Sadece veritabanını export etmek yeterlidir
+export default databaseRef ; // Sadece veritabanını export etmek yeterlidir
