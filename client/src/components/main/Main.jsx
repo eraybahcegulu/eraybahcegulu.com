@@ -94,6 +94,12 @@ const Main = () => {
 
         <FirebaseComponent></FirebaseComponent>
 
+        <div className='mt-10'>
+          <Spin tip="Güncelleniyor" >
+            <div className="content" />
+          </Spin>
+        </div>
+
         <div className='technologies w-auto h-auto text-center mt-12'>
           <h2>TECHNOLOGIES I USE</h2>
           <div className='flex-auto mt-2'>
@@ -149,11 +155,7 @@ const Main = () => {
 
 
 
-        <div className='mt-10'>
-          <Spin tip="Güncelleniyor" >
-            <div className="content" />
-          </Spin>
-        </div>
+
 
 
 
