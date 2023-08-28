@@ -100,7 +100,7 @@ const Main = () => {
           </Spin>
         </div>
 
-        <div className='technologies w-auto h-auto text-center mt-12'>
+        <div className='technologies w-auto h-auto text-center mt-20'>
           <h2>TECHNOLOGIES I USE</h2>
           <div className='flex-auto mt-2'>
 
@@ -159,7 +159,7 @@ const Main = () => {
 
 
 
-        <div className='comm mt-20'>
+        <div className='comm mt-10'>
 
           <a href="https://twitter.com/itsErayizm" target="_blank" className='m-5'>
             <FontAwesomeIcon icon={faXTwitter} beat size="2xl" style={{ color: "#3b64ab", }} />
