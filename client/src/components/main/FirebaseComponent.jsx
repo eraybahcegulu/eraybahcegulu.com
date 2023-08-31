@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { ref, set, push } from 'firebase/database';
 import databaseRef from '../../firebase';
-import './FirebaseComponent.css'; 
+import './FirebaseComponent.css';
 
 function FirebaseComponent() {
   const [data, setData] = useState({ box1: '', box2: '' });
   const [notification, setNotification] = useState('');
+
+  const maxLengthNameSurname = 25;
+  const maxLengthMessage = 100;
 
   const handleButtonClick = () => {
     if (data.box1.trim() === '' || data.box2.trim() === '') {
@@ -41,30 +44,40 @@ function FirebaseComponent() {
   return (
 
     <fieldset className="firebase-container">
-  <legend className='legend'>CONTACT</legend>
-  <input
-    type="text"
-    value={data.box1}
-    onChange={(e) => {
-      const newValue = e.target.value.replace(/[^A-Za-zğĞıİöÖüÜşŞçÇ\s]/g, "");
-      setData({ ...data, box1: newValue });
-    }}
-    className="firebase-input"
-    placeholder="Name-Surname"
-  />
-  <textarea
-    value={data.box2}
-    onChange={(e) => setData({ ...data, box2: e.target.value })}
-    className="firebase-textarea"
-    placeholder="Message"
-  />
-  <button onClick={handleButtonClick} className="firebase-button">
-    Send Message
-  </button>
-  <p className={`notification ${notification ? 'show' : 'hide'}`}>
-    {notification}
-  </p>
-</fieldset>
+      <legend className='legend'>CONTACT</legend>
+      <input
+        type="text"
+        value={data.box1}
+        onChange={(e) => {
+          const newValue = e.target.value.replace(/[^A-Za-zğĞıİöÖüÜşŞçÇ\s]/g, "");
+          setData({ ...data, box1: newValue });
+        }}
+        className="firebase-input"
+        placeholder="Name-Surname"
+        maxLength={maxLengthNameSurname}
+      />
+      <textarea
+        value={data.box2}
+        onChange={(e) => setData({ ...data, box2: e.target.value })}
+        className="firebase-textarea"
+        placeholder="Message"
+        maxLength={maxLengthMessage}
+      />
+
+      <p>Characters Remaining: {maxLengthMessage - data.box2.length}</p>
+
+      <button
+        onClick={handleButtonClick}
+        className="firebase-button mt-2"
+
+      >
+        Send Message
+      </button>
+      <p className={`notification ${notification ? 'show' : 'hide'}`}>
+
+        {notification}
+      </p>
+    </fieldset>
 
   );
 }
