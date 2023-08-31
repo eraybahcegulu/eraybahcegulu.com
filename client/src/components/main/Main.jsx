@@ -81,7 +81,7 @@ const Main = () => {
             />
           </div>
 
-          <div className='ml-20 w-2/4 pl-20 '>
+          <div className='ml-25 w-2/4 pl-20 '>
             <h2>EXPERIENCE</h2>
             <Steps
               progressDot

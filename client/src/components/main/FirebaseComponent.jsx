@@ -41,28 +41,30 @@ function FirebaseComponent() {
   return (
 
     <fieldset className="firebase-container">
-      <legend className='legend'>CONTACT</legend>
-      <input
-        type="text"
-        value={data.box1}
-        onChange={(e) => setData({ ...data, box1: e.target.value })}
-        className="firebase-input"
-        placeholder="Ad-Soyad"
-      />
-      <textarea
-        value={data.box2}
-        onChange={(e) => setData({ ...data, box2: e.target.value })}
-        className="firebase-textarea"
-        placeholder="Mesaj"
-      />
-      <button onClick={handleButtonClick} className="firebase-button">
-        Send Message
-      </button>
-      <p className={`notification ${notification ? 'show' : 'hide'}`}>
-        {notification}
-      </p>
-
-    </fieldset>
+  <legend className='legend'>CONTACT</legend>
+  <input
+    type="text"
+    value={data.box1}
+    onChange={(e) => {
+      const newValue = e.target.value.replace(/[^A-Za-zğĞıİöÖüÜşŞçÇ\s]/g, "");
+      setData({ ...data, box1: newValue });
+    }}
+    className="firebase-input"
+    placeholder="Name-Surname"
+  />
+  <textarea
+    value={data.box2}
+    onChange={(e) => setData({ ...data, box2: e.target.value })}
+    className="firebase-textarea"
+    placeholder="Message"
+  />
+  <button onClick={handleButtonClick} className="firebase-button">
+    Send Message
+  </button>
+  <p className={`notification ${notification ? 'show' : 'hide'}`}>
+    {notification}
+  </p>
+</fieldset>
 
   );
 }
