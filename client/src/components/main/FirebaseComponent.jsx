@@ -11,7 +11,7 @@ function FirebaseComponent() {
     if (data.box1.trim() === '' || data.box2.trim() === '') {
       setNotification('Lütfen boş alan bırakmayın.');
     } else {
-      const newDataRef = push(ref(databaseRef)); // Yeni bir eşsiz anahtar oluştur
+      const newDataRef = push(ref(databaseRef));
       const now = new Date();
 
       const newData = {

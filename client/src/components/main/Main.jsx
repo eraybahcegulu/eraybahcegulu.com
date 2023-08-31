@@ -191,7 +191,7 @@ const Main = () => {
         </div>
 
         <div className='mt-5' >
-          ©2023 Created by Eray Bahçegülü
+          ©2023 Created by Eray BAHÇEGÜLÜ
         </div>
 
       </main>
