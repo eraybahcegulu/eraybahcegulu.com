@@ -90,11 +90,11 @@ const Main = () => {
               items={[
                 {
                   title: 'Kuartek Proje Tasarım - Intern',
-                  description: '2022, Kütahya',
+                  description: '2022 Temmuz-Ağustos, Kütahya',
                 },
                 {
                   title: 'Bilgi İşlem Daire Başkanlığı - Intern ',
-                  description: '2023, Kütahya Dumlupınar Üniversitesi Rektörlüğü',
+                  description: '2023 Temmuz-Ağustos, KDPÜ Rektörlüğü',
                 },
               ]}
             />
