@@ -1,6 +1,5 @@
-// src/firebase.js
 import { initializeApp } from 'firebase/app';
-import { getDatabase } from 'firebase/database'; // Değişiklik burada
+import { getDatabase } from 'firebase/database';
 
 const firebaseConfig  = {
     apiKey: "AIzaSyAqfnVVx7jcIP-tbtdYp7k3jsMYTWzaes0",
@@ -14,6 +13,6 @@ const firebaseConfig  = {
 
 // Firebase'i başlatın
 const app = initializeApp(firebaseConfig);
-const databaseRef  = getDatabase(app); // Değişiklik burada
+const databaseRef  = getDatabase(app);
 
-export default databaseRef ; // Sadece veritabanını export etmek yeterlidir
+export default databaseRef ;
