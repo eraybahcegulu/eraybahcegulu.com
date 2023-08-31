@@ -190,6 +190,10 @@ const Main = () => {
           </a>
         </div>
 
+        <div className='mt-5' >
+          ©2023 Created by Eray Bahçegülü
+        </div>
+
       </main>
     </div>
   )
