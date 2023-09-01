@@ -14,6 +14,8 @@ import { Spin, Button, Form, Input } from 'antd';
 
 import FirebaseComponent from './FirebaseComponent.jsx';
 
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -192,6 +194,12 @@ const Main = () => {
 
         <div className='mt-5' >
           ©2023 Created by Eray BAHÇEGÜLÜ
+        </div>
+
+        <div>
+          <Link to="/test">
+            <button>test</button>
+          </Link>
         </div>
 
       </main>
