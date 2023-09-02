@@ -9,7 +9,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Steps } from 'antd';
-import { Spin, Button, Form, Input } from 'antd';
+import { Spin } from 'antd';
 
 import FirebaseComponent from './FirebaseComponent.jsx';
 
