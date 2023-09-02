@@ -10,10 +10,7 @@ function App() {
   ReactGA.initialize("G-5N3FNKYL58");
 
 
-  ReactGA.send({ 
-    hitType: "pageview", 
-    page: window.location.pathname,
-  });
+  ReactGA.send({ hitType: "pageview", page: "/my-path" });
   
   return (
     <Router>

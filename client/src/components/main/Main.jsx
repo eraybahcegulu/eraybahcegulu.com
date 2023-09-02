@@ -8,7 +8,6 @@ import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import ReactGA from 'react-ga4';
 import { Steps } from 'antd';
 import { Spin, Button, Form, Input } from 'antd';
 
@@ -16,32 +15,6 @@ import FirebaseComponent from './FirebaseComponent.jsx';
 
 import { Link } from 'react-router-dom';
 
-
-
-
-
-
-const layout = {
-  labelCol: {
-    span: 8,
-  },
-  wrapperCol: {
-    span: 16,
-  },
-};
-
-
-
-ReactGA.initialize("G-5N3FNKYL58");
-
-
-ReactGA.send({
-  hitType: "pageview",
-  page: window.location.pathname,
-});
-
-
-const description = '';
 const Main = () => {
 
   return (
