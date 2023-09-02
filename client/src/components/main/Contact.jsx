@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ref, set, push } from 'firebase/database';
 import databaseRef from '../../firebase';
-import './FirebaseComponent.css';
+import './Contact.css';
 
-function FirebaseComponent() {
+function Contact() {
   const [data, setData] = useState({ box1: '', box2: '' });
   const [notification, setNotification] = useState('');
 
@@ -82,4 +82,4 @@ function FirebaseComponent() {
   );
 }
 
-export default FirebaseComponent;
+export default Contact;

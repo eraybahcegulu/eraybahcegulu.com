@@ -8,13 +8,18 @@ import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import ReactGA from 'react-ga4';
 import { Steps } from 'antd';
 import { Spin } from 'antd';
 
-import FirebaseComponent from './FirebaseComponent.jsx';
+import Contact from './Contact.jsx';
 
-import { Link } from 'react-router-dom';
+ReactGA.initialize("G-5N3FNKYL58");
 
+ReactGA.send({
+  hitType: "pageview",
+  page: window.location.pathname,
+});
 const Main = () => {
 
   return (
@@ -76,7 +81,7 @@ const Main = () => {
           </div>
         </div>
 
-        <FirebaseComponent></FirebaseComponent>
+        <Contact></Contact>
 
         <div className='mt-10'>
           <Spin tip="UPDATING" >
@@ -143,7 +148,7 @@ const Main = () => {
 
 
 
-        <div className='comm mt-10'>
+        <div className='comm mt-5'>
 
           <a href="https://twitter.com/itsErayizm" target="_blank" className='m-5'>
             <FontAwesomeIcon icon={faXTwitter} beat size="2xl" style={{ color: "#3b64ab", }} />
@@ -168,13 +173,6 @@ const Main = () => {
         <div className='mt-5' >
           ©2023 Created by Eray BAHÇEGÜLÜ
         </div>
-
-        <div>
-          <Link to="/test">
-            <button>test</button>
-          </Link>
-        </div>
-
       </main>
     </div>
   )

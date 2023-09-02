@@ -1,5 +1,4 @@
 import Main from "./components/main/Main.jsx";
-import Test from "./components/main/Test.jsx";
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ReactGA from 'react-ga4';
@@ -16,7 +15,6 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact component={Main} />
-        <Route path="/test" exact component={Test} />
       </Switch>
     </Router>
 
