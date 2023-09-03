@@ -71,11 +71,11 @@ const Main = () => {
               direction="vertical"
               items={[
                 {
-                  title: 'Kuartek Proje Tasarım - Intern',
+                  title: 'Kuartek Proje Tasarım • Intern',
                   description: '2022 Temmuz-Ağustos, Kütahya',
                 },
                 {
-                  title: 'Bilgi İşlem Daire Başkanlığı - Intern ',
+                  title: 'Bilgi İşlem Daire Başkanlığı • Intern ',
                   description: '2023 Temmuz-Ağustos, KDPÜ Rektörlüğü',
                 },
               ]}
@@ -83,15 +83,15 @@ const Main = () => {
           </div>
         </div>
 
-        <Contact></Contact>
+          <Contact></Contact>
 
-        <div className='mt-10'>
+        <div className='p-5'>
           <Spin tip="UPDATING" >
             <div className="content" />
           </Spin>
         </div>
 
-        <div className='w-auto h-auto text-center mt-20'>
+        <div className='w-auto h-auto text-center mt-10'>
           <h2>TECHNOLOGIES I USE</h2>
           <div className='flex-auto mt-2'>
 
