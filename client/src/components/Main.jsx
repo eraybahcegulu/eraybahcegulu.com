@@ -44,7 +44,7 @@ const Main = () => {
         </div>
 
         <div className='text-left flex mt-10'>
-          <div className='w-3/5 ml-10'>
+          <div className='w-7/12 ml-20'>
             <h2>EDUCATION</h2>
             <Steps
               progressDot
@@ -56,7 +56,7 @@ const Main = () => {
                   description: '2018',
                 },
                 {
-                  title: 'Kütahya Dumlupınar Üniversitesi • Bilgisayar Mühendisliği',
+                  title: 'Dumlupınar Üniversitesi • Bilgisayar Mühendisliği',
                   description: '2019-2023 • 3.00/4.00',
                 },
               ]}
@@ -76,7 +76,7 @@ const Main = () => {
                 },
                 {
                   title: 'Bilgi İşlem Daire Başkanlığı • Intern ',
-                  description: '2023 Temmuz-Ağustos, KDPÜ Rektörlüğü',
+                  description: '2023 Temmuz-Ağustos, DPÜ Rektörlüğü',
                 },
               ]}
             />
