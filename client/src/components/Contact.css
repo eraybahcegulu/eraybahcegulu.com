@@ -23,9 +23,9 @@
 
 .notification {
     margin-top: 10px;
-    color: green;
     opacity: 0;
     transition: opacity 1s ease, transform 1s ease;
+    color : #5b0680;
   }
   
   .notification.show {
@@ -35,7 +35,8 @@
   
   .notification.hide {
     opacity: 0;
-    transform: translateY(-100%); 
+    transform: translateY(-100%);
+
   }
   
 

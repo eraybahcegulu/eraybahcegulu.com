@@ -12,7 +12,7 @@ function Contact() {
 
   const handleButtonClick = () => {
     if (data.box1.trim() === '' || data.box2.trim() === '') {
-      setNotification('Lütfen boş alan bırakmayın.');
+      setNotification('Please do not leave blank.');
     } else {
       const newDataRef = push(ref(databaseRef));
       const now = new Date();
@@ -24,7 +24,7 @@ function Contact() {
       };
 
       set(newDataRef, newData).then(() => {
-        setNotification('Mesaj Gönderildi.');
+        setNotification('Message sent.');
       });
     }
   };
@@ -44,7 +44,7 @@ function Contact() {
   return (
 
     <fieldset className="contact-container">
-      <legend className='legend font-black '>CONTACT</legend>
+      <legend className='legend font-black '> CONTACT </legend>
       <input
         type="text"
         value={data.box1}

@@ -11,7 +11,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import ReactGA from 'react-ga4';
 import { Steps } from 'antd';
 import { Spin } from 'antd';
-
+import './Main.css';
 import Contact from './Contact.jsx';
 import Title from '../Title';
 
@@ -47,6 +47,7 @@ const Main = () => {
           <div className='w-7/12 ml-20'>
             <h2 className='font-black'>EDUCATION</h2>
             <Steps
+            className='steps-education'
               progressDot
               current={2}
               direction="vertical"
@@ -66,6 +67,7 @@ const Main = () => {
           <div className='w-2/5'>
             <h2 className='font-black'>EXPERIENCE</h2>
             <Steps
+              className='steps-experience'
               progressDot
               current={2}
               direction="vertical"
@@ -86,8 +88,8 @@ const Main = () => {
           <Contact></Contact>
 
         <div className='p-5'>
-          <Spin tip="UPDATING" >
-            <div className="content" />
+          <Spin className='spin' tip="UPDATING"  >
+            <div className='content' />
           </Spin>
         </div>
 
