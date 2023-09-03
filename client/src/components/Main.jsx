@@ -43,8 +43,8 @@ const Main = () => {
           </h2>
         </div>
 
-        <div className='text-left flex mt-10 ml-20'>
-          <div className='w-2/4 '>
+        <div className='text-left flex mt-10'>
+          <div className='w-3/5 ml-10'>
             <h2>EDUCATION</h2>
             <Steps
               progressDot
@@ -63,7 +63,7 @@ const Main = () => {
             />
           </div>
 
-          <div className='ml-25 w-2/4 pl-20'>
+          <div className='w-2/5'>
             <h2>EXPERIENCE</h2>
             <Steps
               progressDot
