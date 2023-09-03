@@ -29,10 +29,10 @@ const Main = () => {
   return (
 
 
-    <div className=' bg-gray-400 header min-w-min h-max w-6/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
+    <div className='bg-gray-400 header min-w-min h-max w-6/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
       <Title title="Eray BAHÇEGÜLÜ" />
 
-      <main className='items-center p-2 md:p-4'>
+      <main className='items-center p-2'>
         <div className='avatar'>
           <Avatar shape="square" size={300} src={eraybahcegulu} icon={<UserOutlined />} />
         </div>
@@ -43,11 +43,10 @@ const Main = () => {
           </h2>
         </div>
 
-        <div className='text-left flex m-auto mt-10 ml-10'>
-          <div className=' education-div w-2/4 '>
+        <div className='text-left flex mt-10 ml-20'>
+          <div className='w-2/4 '>
             <h2>EDUCATION</h2>
             <Steps
-              className='steps-education'
               progressDot
               current={2}
               direction="vertical"
@@ -64,10 +63,9 @@ const Main = () => {
             />
           </div>
 
-          <div className='experience-div ml-25 w-2/4 pl-20 '>
+          <div className='ml-25 w-2/4 pl-20'>
             <h2>EXPERIENCE</h2>
             <Steps
-              className='steps-experience'
               progressDot
               current={2}
               direction="vertical"
@@ -93,9 +91,9 @@ const Main = () => {
           </Spin>
         </div>
 
-        <div className='technologies-main w-auto h-auto text-center mt-20'>
+        <div className='w-auto h-auto text-center mt-20'>
           <h2>TECHNOLOGIES I USE</h2>
-          <div className='technologies flex-auto mt-2'>
+          <div className='flex-auto mt-2'>
 
             <span className='m-5'>
               Arduino
