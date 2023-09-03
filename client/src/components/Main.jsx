@@ -45,7 +45,7 @@ const Main = () => {
 
         <div className='text-left flex mt-10'>
           <div className='w-7/12 ml-20'>
-            <h2>EDUCATION</h2>
+            <h2 className='font-black'>EDUCATION</h2>
             <Steps
               progressDot
               current={2}
@@ -64,7 +64,7 @@ const Main = () => {
           </div>
 
           <div className='w-2/5'>
-            <h2>EXPERIENCE</h2>
+            <h2 className='font-black'>EXPERIENCE</h2>
             <Steps
               progressDot
               current={2}
@@ -92,7 +92,7 @@ const Main = () => {
         </div>
 
         <div className='w-auto h-auto text-center mt-10'>
-          <h2>TECHNOLOGIES I USE</h2>
+          <h2 className='font-black'>TECHNOLOGIES I USE</h2>
           <div className='flex-auto mt-2'>
 
             <span className='m-5'>

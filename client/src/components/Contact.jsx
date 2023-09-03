@@ -44,7 +44,7 @@ function Contact() {
   return (
 
     <fieldset className="contact-container">
-      <legend className='legend'>CONTACT</legend>
+      <legend className='legend font-black '>CONTACT</legend>
       <input
         type="text"
         value={data.box1}
