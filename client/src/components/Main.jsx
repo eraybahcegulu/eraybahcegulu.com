@@ -53,13 +53,14 @@ const Main = () => {
               direction="vertical"
               items={[
                 {
-                  title: 'Doğuş Üniversitesi • Endüstri Mühendisliği',
-                  description: '2018',
-                },
-                {
                   title: 'Dumlupınar Üniversitesi • Bilgisayar Mühendisliği',
                   description: '2019-2023 • 3.00/4.00',
                 },
+                {
+                  title: 'Doğuş Üniversitesi • Endüstri Mühendisliği',
+                  description: '2018',
+                },
+
               ]}
             />
           </div>
@@ -73,12 +74,13 @@ const Main = () => {
               direction="vertical"
               items={[
                 {
-                  title: 'Kuartek Proje Tasarım • Intern',
-                  description: '2022 Temmuz-Ağustos, Kütahya',
+                  title: 'Bilgi İşlem Daire Başkanlığı • Intern ',
+                  description: '2023 Temmuz-Ağustos • DPÜ Rektörlüğü',
+
                 },
                 {
-                  title: 'Bilgi İşlem Daire Başkanlığı • Intern ',
-                  description: '2023 Temmuz-Ağustos, DPÜ Rektörlüğü',
+                  title: 'Kuartek Proje Tasarım • Intern',
+                  description: '2022 Temmuz-Ağustos • Kütahya',
                 },
               ]}
             />
