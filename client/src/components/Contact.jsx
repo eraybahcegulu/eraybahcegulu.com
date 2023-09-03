@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ref, set, push } from 'firebase/database';
-import databaseRef from '../../firebase';
+import databaseRef from '../firebase';
 import './Contact.css';
 
 function Contact() {
@@ -43,7 +43,7 @@ function Contact() {
 
   return (
 
-    <fieldset className="firebase-container">
+    <fieldset className="contact-container">
       <legend className='legend'>CONTACT</legend>
       <input
         type="text"
@@ -52,14 +52,14 @@ function Contact() {
           const newValue = e.target.value.replace(/[^A-Za-zğĞıİöÖüÜşŞçÇ\s]/g, "");
           setData({ ...data, box1: newValue });
         }}
-        className="firebase-input"
+        className="contact-input"
         placeholder="Name-Surname"
         maxLength={maxLengthNameSurname}
       />
       <textarea
         value={data.box2}
         onChange={(e) => setData({ ...data, box2: e.target.value })}
-        className="firebase-textarea"
+        className="contact-textarea"
         placeholder="Message"
         maxLength={maxLengthMessage}
       />
@@ -68,7 +68,7 @@ function Contact() {
 
       <button
         onClick={handleButtonClick}
-        className="firebase-button mt-2"
+        className="contact-button mt-2"
 
       >
         Send Message

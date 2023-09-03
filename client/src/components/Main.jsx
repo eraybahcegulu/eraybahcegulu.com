@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
-import eraybahcegulu from "../../eraybahcegulu.jpg"
+import eraybahcegulu from "../eraybahcegulu.jpg"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
@@ -14,6 +14,8 @@ import { Spin } from 'antd';
 
 import Contact from './Contact.jsx';
 
+import './Main.css'
+
 ReactGA.initialize("G-5N3FNKYL58");
 
 ReactGA.send({
@@ -25,10 +27,10 @@ const Main = () => {
   return (
 
 
-    <div className='bg-gray-400 header min-w-min h-max w-6/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
+    <div className='main-div bg-gray-400 header min-w-min h-max w-6/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
 
 
-      <main className=' items-center p-2 md:p-4'>
+      <main className='main items-center p-2 md:p-4'>
         <div className='avatar'>
           <Avatar shape="square" size={300} src={eraybahcegulu} icon={<UserOutlined />} />
         </div>
@@ -39,12 +41,11 @@ const Main = () => {
           </h2>
         </div>
 
-
-
-        <div className='about text-left flex m-auto mt-10 ml-10'>
-          <div className='w-2/4'>
+        <div className='about  text-left flex m-auto mt-10 ml-10'>
+          <div className='w-2/4 '>
             <h2>EDUCATION</h2>
             <Steps
+              className='steps-education'
               progressDot
               current={2}
               direction="vertical"
@@ -64,6 +65,7 @@ const Main = () => {
           <div className='ml-25 w-2/4 pl-20 '>
             <h2>EXPERIENCE</h2>
             <Steps
+              className='steps-experience'
               progressDot
               current={2}
               direction="vertical"
@@ -89,9 +91,9 @@ const Main = () => {
           </Spin>
         </div>
 
-        <div className='technologies w-auto h-auto text-center mt-20'>
+        <div className='technologies-main w-auto h-auto text-center mt-20'>
           <h2>TECHNOLOGIES I USE</h2>
-          <div className='flex-auto mt-2'>
+          <div className='technologies flex-auto mt-2'>
 
             <span className='m-5'>
               Arduino
@@ -140,13 +142,6 @@ const Main = () => {
           </div>
 
         </div>
-
-
-
-
-
-
-
 
         <div className='comm mt-5'>
 

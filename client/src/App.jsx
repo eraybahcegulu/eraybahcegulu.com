@@ -1,4 +1,4 @@
-import Main from "./components/main/Main.jsx";
+import Main from "./components/Main.jsx";
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ReactGA from 'react-ga4';

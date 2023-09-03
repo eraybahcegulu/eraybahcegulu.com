@@ -1,0 +1,74 @@
+@media screen and (max-width: 1100px) {
+
+
+    .main-div{
+        font-size: 15px;
+        
+    }
+
+    .main{
+        width: 800px;
+    }
+
+    .technologies{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+  }
+
+  @media screen and (max-width: 850px) {
+
+
+
+    .main-div{
+        font-size: 15px;
+    }
+
+    .main{
+        width: 600px;
+    }
+
+    .technologies{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+  }
+
+  @media screen and (max-width: 650px) {
+
+    .steps-education .ant-steps-item-title{
+        font-size: 10px;
+    }
+
+    .steps-education .ant-steps-item-description{
+        font-size: 10px;
+    }
+
+    .steps-experience .ant-steps-item-title{
+        font-size: 10px;
+    }
+
+    .steps-experience .ant-steps-item-description{
+        font-size: 10px;
+    }
+
+    .main-div{
+        font-size: 10px;
+    }
+
+    .main{
+        width: 460px;
+    }
+
+    .technologies{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+  }
+
