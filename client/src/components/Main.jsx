@@ -14,7 +14,7 @@ import { Spin } from 'antd';
 
 import Contact from './Contact.jsx';
 
-import './Main.css'
+
 
 ReactGA.initialize("G-5N3FNKYL58");
 
@@ -22,27 +22,28 @@ ReactGA.send({
   hitType: "pageview",
   page: window.location.pathname,
 });
+
 const Main = () => {
 
   return (
 
 
-    <div className='main-div bg-gray-400 header min-w-min h-max w-6/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
+    <div className=' bg-gray-400 header min-w-min h-max w-6/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
 
 
-      <main className='main items-center p-2 md:p-4'>
+      <main className='items-center p-2 md:p-4'>
         <div className='avatar'>
           <Avatar shape="square" size={300} src={eraybahcegulu} icon={<UserOutlined />} />
         </div>
         <div className="logo m-auto mt-5">
-          <h2 className='font-bold px-2 py-2 md:text-5xl'>
-            <a href="">ERAY BAHÇEGÜLÜ</a>
+          <h2 className='font-bold text-5xl px-2 py-2 '>
+            ERAY BAHÇEGÜLÜ
 
           </h2>
         </div>
 
         <div className='text-left flex m-auto mt-10 ml-10'>
-          <div className=' about-div w-2/4 '>
+          <div className=' education-div w-2/4 '>
             <h2>EDUCATION</h2>
             <Steps
               className='steps-education'
