@@ -11,7 +11,6 @@ const firebaseConfig  = {
     appId: "1:888850986805:web:142d49753e0179602d3e7c"
 };
 
-// Firebase'i başlatın
 const app = initializeApp(firebaseConfig);
 const databaseRef  = getDatabase(app);
 

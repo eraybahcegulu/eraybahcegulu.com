@@ -13,6 +13,7 @@ import { Steps } from 'antd';
 import { Spin } from 'antd';
 
 import Contact from './Contact.jsx';
+import Title from '../Title';
 
 
 
@@ -29,7 +30,7 @@ const Main = () => {
 
 
     <div className=' bg-gray-400 header min-w-min h-max w-6/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
-
+      <Title title="Eray BAHÇEGÜLÜ" />
 
       <main className='items-center p-2 md:p-4'>
         <div className='avatar'>
