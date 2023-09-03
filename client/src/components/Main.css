@@ -1,6 +1,5 @@
 @media screen and (max-width: 1100px) {
 
-
     .main-div{
         font-size: 15px;
         
@@ -30,15 +29,19 @@
         width: 600px;
     }
 
-    .technologies{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+
     
   }
 
   @media screen and (max-width: 650px) {
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
 
     .steps-education .ant-steps-item-title{
         font-size: 10px;
@@ -58,16 +61,17 @@
 
     .main-div{
         font-size: 10px;
+        
     }
 
     .main{
-        width: 460px;
+        
+        width: 420px;
     }
 
-    .technologies{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    
+    .experience-div{
+        width: 67%;
     }
     
   }
