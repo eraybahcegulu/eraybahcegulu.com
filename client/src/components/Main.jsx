@@ -49,7 +49,7 @@ const Main = () => {
             <Steps
             className='steps-education'
               progressDot
-              current={2}
+              current={3}
               direction="vertical"
               items={[
                 {
@@ -59,6 +59,10 @@ const Main = () => {
                 {
                   title: 'Doğuş Üniversitesi • Endüstri Mühendisliği',
                   description: '2018',
+                },
+                {
+                  title: 'Kütahya Koleji',
+                  description: '2017',
                 },
 
               ]}
