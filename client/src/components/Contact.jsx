@@ -10,17 +10,24 @@ function Contact() {
   const maxLengthNameSurname = 25;
   const maxLengthMessage = 100;
 
+  const getFormattedDate = () => {
+    const now = new Date();
+    const date = `${String(now.getDate()).padStart(2, '0')}-${String(now.getMonth() + 1).padStart(2, '0')}-${now.getFullYear()} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+    
+    return date;
+  };
+
   const handleButtonClick = () => {
     if (data.box1.trim() === '' || data.box2.trim() === '') {
       setNotification('Please do not leave blank.');
     } else {
       const newDataRef = push(ref(databaseRef));
-      const now = new Date();
+      const date = getFormattedDate();
 
       const newData = {
         ad_soyad: data.box1,
         mesaj: data.box2,
-        tarih: now.toISOString(),
+        tarih: date,
       };
 
       set(newDataRef, newData).then(() => {
