@@ -63,15 +63,20 @@ function Contact() {
         placeholder="Name-Surname"
         maxLength={maxLengthNameSurname}
       />
-      <textarea
-        value={data.box2}
-        onChange={(e) => setData({ ...data, box2: e.target.value })}
-        className="contact-textarea"
-        placeholder="Message"
-        maxLength={maxLengthMessage}
-      />
+      <div style={{ position: 'relative' }}>
+  <textarea
+    value={data.box2}
+    onChange={(e) => setData({ ...data, box2: e.target.value })}
+    className="contact-textarea"
+    placeholder="Message"
+    maxLength={maxLengthMessage}
+  />
+  <p style={{ position: 'absolute', bottom: '-6px', right: '10px' }}>
+     {maxLengthMessage - data.box2.length}/100
+  </p>
+</div>
 
-      <p>Characters Remaining: {maxLengthMessage - data.box2.length}</p>
+
 
       <button
         onClick={handleButtonClick}
