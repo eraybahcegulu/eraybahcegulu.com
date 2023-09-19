@@ -29,7 +29,7 @@ const Main = () => {
   return (
 
 
-    <div className='bg-gray-400 header min-w-min h-max w-6/12 mt-5 m-auto border-black border-2 rounded-md text-center' >
+    <div className='bg-gray-400 header w-[1000px] h-max mt-5 mx-auto border-black border-2 rounded-md text-center'>
       <Title title="Eray BAHÇEGÜLÜ" />
 
       <main className='items-center p-2'>
@@ -43,8 +43,8 @@ const Main = () => {
           </h2>
         </div>
 
-        <div className='text-left flex mt-10'>
-          <div className='w-7/12 ml-20'>
+        <div className='text-left w-full flex mt-10'>
+          <div className='ml-20 w-12/12'>
             <h2 className='font-black'>EDUCATION</h2>
             <Steps
               className='steps-education'
@@ -69,7 +69,7 @@ const Main = () => {
             />
           </div>
 
-          <div className='w-2/5'>
+          <div className='ml-32 w-12/12 pr-20' >
             <h2 className='font-black'>EXPERIENCE</h2>
             <Steps
               className='steps-experience'
