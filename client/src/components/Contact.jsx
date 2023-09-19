@@ -39,7 +39,7 @@ function Contact() {
           setIsLoading(false);
           setNotification('Message sent.');
           setData({ box1: '', box2: '' });
-        }, 5000);
+        }, 5500);
       });
     }
   };
@@ -50,7 +50,7 @@ function Contact() {
     if (notification) {
       timer = setTimeout(() => {
         setNotification('');
-      }, 3000);
+      }, 3500);
     }
 
     return () => clearTimeout(timer);
