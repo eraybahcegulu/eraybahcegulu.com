@@ -6,6 +6,7 @@ import './Contact.css';
 function Contact() {
   const [data, setData] = useState({ box1: '', box2: '' });
   const [notification, setNotification] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const maxLengthNameSurname = 25;
   const maxLengthMessage = 100;
@@ -18,20 +19,27 @@ function Contact() {
   };
 
   const handleButtonClick = () => {
-    if (data.box1.trim() === '' || data.box2.trim() === '') {
-      setNotification('Please do not leave blank.');
+    if (isLoading) return;
+  
+    if (data.box1.trim().length < 3 || data.box2.trim().length < 3) {
+      setNotification('Name-Surname and Message must be at least 3 characters long');
     } else {
+      setIsLoading(true);
       const newDataRef = push(ref(databaseRef));
       const date = getFormattedDate();
-
+  
       const newData = {
         ad_soyad: data.box1,
         mesaj: data.box2,
         tarih: date,
       };
-
+  
       set(newDataRef, newData).then(() => {
-        setNotification('Message sent.');
+        setTimeout(() => {
+          setIsLoading(false);
+          setNotification('Message sent.');
+          setData({ box1: '', box2: '' });
+        }, 5000);
       });
     }
   };
@@ -49,7 +57,6 @@ function Contact() {
   }, [notification]);
 
   return (
-
     <fieldset className="contact-container">
       <legend className='legend font-black '> CONTACT </legend>
       <input
@@ -62,35 +69,32 @@ function Contact() {
         className="contact-input"
         placeholder="Name-Surname"
         maxLength={maxLengthNameSurname}
+        disabled={isLoading}
       />
       <div style={{ position: 'relative' }}>
-  <textarea
-    value={data.box2}
-    onChange={(e) => setData({ ...data, box2: e.target.value })}
-    className="contact-textarea"
-    placeholder="Message"
-    maxLength={maxLengthMessage}
-  />
-  <p style={{ position: 'absolute', bottom: '-6px', right: '10px' }}>
-     {maxLengthMessage - data.box2.length}/100
-  </p>
-</div>
-
-
-
+        <textarea
+          value={data.box2}
+          onChange={(e) => setData({ ...data, box2: e.target.value })}
+          className="contact-textarea"
+          placeholder="Message"
+          maxLength={maxLengthMessage}
+          disabled={isLoading}
+        />
+        <p style={{ position: 'absolute', bottom: '-6px', right: '10px' }}>
+          {maxLengthMessage - data.box2.length}/100
+        </p>
+      </div>
       <button
         onClick={handleButtonClick}
-        className="contact-button mt-2"
-
+        className={`contact-button mt-2 ${isLoading ? 'disabled' : ''}`}
+        disabled={isLoading}
       >
-        Send Message
+        {isLoading ? 'Sending...' : 'Send Message'}
       </button>
       <p className={`notification ${notification ? 'show' : 'hide'}`}>
-
         {notification}
       </p>
     </fieldset>
-
   );
 }
 

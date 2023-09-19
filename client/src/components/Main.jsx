@@ -47,7 +47,7 @@ const Main = () => {
           <div className='w-7/12 ml-20'>
             <h2 className='font-black'>EDUCATION</h2>
             <Steps
-            className='steps-education'
+              className='steps-education'
               progressDot
               current={3}
               direction="vertical"
@@ -91,7 +91,7 @@ const Main = () => {
           </div>
         </div>
 
-          <Contact></Contact>
+        <Contact></Contact>
 
         <div className='p-5'>
           <Spin className='spin' tip="UPDATING"  >
@@ -103,52 +103,79 @@ const Main = () => {
           <h2 className='font-black'>TECHNOLOGIES I USE</h2>
           <div className='flex-auto mt-2'>
 
-            <span className='m-5'>
-              Arduino
-            </span>
+            <div className='flex justify-center'>
 
-            <span className='m-5'>
-              HTML
-            </span>
 
-            <span className='m-5'>
-              CSS
-            </span>
+              <span className='m-5'>
+                HTML
+              </span>
 
-            <span className='m-5'>
-              WinForms
-            </span>
+              <span className='m-5'>
+                CSS
+              </span>
 
-            <span className='m-5'>
-              Flutter
-            </span>
+              <span className='m-5'>
+                React
+              </span>
 
-            <span className='m-5'>
-              React
-            </span>
+              <span className='m-5'>
+                NodeJS
+              </span>
 
-            <span className='m-5'>
-              NodeJS
-            </span>
+              <span className='m-5'>
+                ExpressJS
+              </span>
 
-            <span className='m-5'>
-              ExpressJS
-            </span>
+              <span className='m-5'>
+                Firebase
+              </span>
 
-            <span className='m-5'>
-              Git
-            </span>
+              <span className='m-5'>
+                MongoDB
+              </span>
 
-            <span className='m-5'>
-              MSSQL
-            </span>
+            </div>
 
-            <span className='m-5'>
-              Unity
-            </span>
+            <div className='flex justify-center'>
 
+              <span className='m-5'>
+                Arduino
+              </span>
+
+              <span className='m-5'>
+                Flutter
+              </span>
+
+              <span className='m-5'>
+                C# WinForms .Net
+              </span>
+
+              <span className='m-5'>
+                Unity
+              </span>
+
+              <span className='m-5'>
+                PHP
+              </span>
+
+              <span className='m-5'>
+                Git
+              </span>
+
+            </div>
+
+            <div className='flex justify-center'>
+
+              <span className='m-5'>
+                ASP.NET MVC Entitiy Framework
+              </span>
+
+              <span className='m-5'>
+                MSSQL
+              </span>
+
+            </div>
           </div>
-
         </div>
 
         <div className='comm mt-5'>
