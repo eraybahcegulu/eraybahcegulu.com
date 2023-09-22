@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import eraybahcegulu from "../eraybahcegulu.jpg"
@@ -8,21 +8,12 @@ import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import ReactGA from 'react-ga4';
 import { Steps } from 'antd';
 import { Spin } from 'antd';
 import './Main.css';
 import Contact from './Contact.jsx';
 import Title from '../Title';
 
-
-
-ReactGA.initialize("G-5N3FNKYL58");
-
-ReactGA.send({
-  hitType: "pageview",
-  page: window.location.pathname,
-});
 
 const Main = () => {
 
