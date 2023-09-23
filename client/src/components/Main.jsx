@@ -170,22 +170,6 @@ const Main = () => {
         </div>
 
         <div className='comm mt-5'>
-
-          <a href="https://twitter.com/itsErayizm" target="_blank" className='m-5'>
-            <FontAwesomeIcon icon={faXTwitter} beat size="2xl" style={{ color: "#3b64ab", }} />
-          </a>
-
-
-          <a href="https://www.instagram.com/eraybahcegulu/" target="_blank" className='m-5' >
-            <FontAwesomeIcon icon={faInstagram} beat size="2xl" style={{ color: "#3b64ab", }} />
-          </a>
-
-
-          <a href="https://www.linkedin.com/in/eraybahcegulu/" target="_blank" className='m-5'>
-            <FontAwesomeIcon icon={faLinkedinIn} beat size="2xl" style={{ color: "#3b64ab", }} />
-          </a>
-
-
           <a href="https://github.com/eraybahcegulu" target="_blank" className='m-5'>
             <FontAwesomeIcon icon={faGithub} beat size="2xl" style={{ color: "#3b64ab", }} />
           </a>
