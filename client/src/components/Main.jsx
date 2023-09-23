@@ -92,7 +92,7 @@ const Main = () => {
 
         <div className='w-auto h-auto text-center mt-10'>
           <h2 className='font-black'>TECHNOLOGIES I USE</h2>
-          <div className='flex-auto mt-2'>
+          <div className='flex-auto'>
 
             <div className='flex justify-center'>
 
