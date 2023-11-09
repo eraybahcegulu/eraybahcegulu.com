@@ -4,9 +4,6 @@ import { UserOutlined } from '@ant-design/icons';
 import eraybahcegulu from "../eraybahcegulu.jpg"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { Steps } from 'antd';
 import { Spin } from 'antd';
@@ -18,8 +15,7 @@ import Title from '../Title';
 const Main = () => {
 
   return (
-
-
+    
     <div className='bg-gray-400 header w-[1000px] h-max mt-5 mx-auto border-black border-2 rounded-md text-center'>
       <Title title="Eray BAHÇEGÜLÜ" />
 
@@ -95,14 +91,12 @@ const Main = () => {
           <div className='flex-auto'>
 
             <div className='flex justify-center'>
-
-
               <span className='m-5'>
-                HTML
+                <strong> HTML </strong>
               </span>
 
               <span className='m-5'>
-                CSS
+                <strong> CSS </strong>
               </span>
 
               <span className='m-5'>
@@ -110,7 +104,41 @@ const Main = () => {
               </span>
 
               <span className='m-5'>
-                NodeJS
+                Firebase
+              </span>
+            </div>
+
+            <div className='flex justify-center'>
+              <span className='m-5'>
+                <strong> UI Frameworks </strong>
+              </span>
+
+              <span className='m-5'>
+                Bootstrap
+              </span>
+
+              <span className='m-5'>
+                TailwindCSS
+              </span>
+
+              <span className='m-5'>
+                Ant Design
+              </span>
+
+              <span className='m-5'>
+                Angular Material
+              </span>
+            </div>
+
+
+            <div className='flex justify-center'>
+
+              <span className='m-5'>
+                <p> <strong> MEAN Stack </strong> </p>
+              </span>
+
+              <span className='m-5'>
+                MongoDB
               </span>
 
               <span className='m-5'>
@@ -118,23 +146,20 @@ const Main = () => {
               </span>
 
               <span className='m-5'>
-                Firebase
+                Angular
               </span>
 
               <span className='m-5'>
-                MongoDB
+                NodeJS
               </span>
+
 
             </div>
 
             <div className='flex justify-center'>
 
               <span className='m-5'>
-                Arduino
-              </span>
-
-              <span className='m-5'>
-                Flutter
+                <strong> Flutter </strong>
               </span>
 
               <span className='m-5'>
@@ -150,7 +175,7 @@ const Main = () => {
               </span>
 
               <span className='m-5'>
-                Git
+                Arduino
               </span>
 
             </div>
@@ -158,11 +183,23 @@ const Main = () => {
             <div className='flex justify-center'>
 
               <span className='m-5'>
-                ASP.NET MVC Entitiy Framework
+                <strong>ASP.NET MVC</strong>
+              </span>
+
+              <span className='m-5'>
+                Entity Framework
               </span>
 
               <span className='m-5'>
                 MSSQL
+              </span>
+
+            </div>
+
+            <div className='flex justify-center'>
+
+              <span className='m-5'>
+                <strong>Git Version Control</strong>
               </span>
 
             </div>
