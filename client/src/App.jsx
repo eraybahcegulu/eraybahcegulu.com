@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact component={Main} />
-        <Route path="/privacy-for-apps1" exact component={Privacy} />
+        <Route path="/privacy-for-android-apps" exact component={Privacy} />
       </Switch>
     </Router>
   );
