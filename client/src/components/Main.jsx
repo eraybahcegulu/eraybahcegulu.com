@@ -1,6 +1,6 @@
 import React from 'react';
 import { Avatar } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
+import { UserOutlined, LoadingOutlined } from '@ant-design/icons';
 import eraybahcegulu from "../eraybahcegulu.jpg"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,7 +15,7 @@ import Title from '../Title';
 const Main = () => {
 
   return (
-    
+
     <div className='bg-gray-400 header w-[1000px] h-max mt-5 mx-auto border-black border-2 rounded-md text-center'>
       <Title title="Eray BAHÇEGÜLÜ" />
 
@@ -77,13 +77,13 @@ const Main = () => {
             />
           </div>
         </div>
+        
+        {/* <Contact></Contact> */}
+       
 
-        <Contact></Contact>
-
-        <div className='p-5'>
-          <Spin className='spin' tip="UPDATING"  >
-            <div className='content' />
-          </Spin>
+        <div>
+          <Spin size="large" />
+          <p className='text-base text-black'> UPDATING </p>
         </div>
 
         <div className='w-auto h-auto text-center mt-10'>
@@ -208,7 +208,7 @@ const Main = () => {
 
         <div className='comm mt-5'>
           <a href="https://github.com/eraybahcegulu" target="_blank" className='m-5'>
-            <FontAwesomeIcon icon={faGithub} beat size="2xl" style={{ color: "#3b64ab", }} />
+          <FontAwesomeIcon icon={faGithub} beat size="2xl" style={{color: "#3e77da",}} />
           </a>
         </div>
 
