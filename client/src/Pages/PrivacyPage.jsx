@@ -2,7 +2,7 @@ import React from 'react';
 
 function Privacy() {
     return (
-        <div className="container mt-4">
+        <div className="bg-slate-400 container p-10">
             <p>
 
                 <h2>Privacy Policy</h2>
