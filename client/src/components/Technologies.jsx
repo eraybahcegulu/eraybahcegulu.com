@@ -1,13 +1,11 @@
-import { Card, Divider } from 'antd';
-import { DownOutlined, UpOutlined } from '@ant-design/icons';
+import { Divider } from 'antd';
 
 const Technologies = () => {
     return (
-        <Card>
-            <h2 className='text-xl font-black'>TECHNOLOGIES I USE</h2>
-            <Divider plain> <DownOutlined /> </Divider>
+        <div > 
+            <Divider plain> <h2 className='text-xl font-black'>TECHNOLOGIES I USE</h2> </Divider>
             <div className='flex flex-col gap-10 mt-10 mb-10'>
-                <ul className='xl:flex flex-row justify-center md:gap-10'>
+                <ul className='md:flex flex-row justify-center md:gap-10'>
                     <li>
                         <strong className='font-extrabold'>Git</strong>
                     </li>
@@ -21,7 +19,7 @@ const Technologies = () => {
                         Firebase
                     </li>
                 </ul>
-                <ul className='xl:flex flex-row justify-center gap-10'>
+                <ul className='md:flex flex-row justify-center gap-10'>
                     <li>
                         <strong>MERN - MEAN Stacks</strong>
                     </li>
@@ -41,7 +39,7 @@ const Technologies = () => {
                         NodeJS
                     </li>
                 </ul>
-                <ul className='xl:flex flex-row justify-center gap-10'>
+                <ul className='md:flex flex-row justify-center gap-10'>
                     <li>
                         <strong>CSS Frameworks</strong>
                     </li>
@@ -61,7 +59,7 @@ const Technologies = () => {
                         Angular Material
                     </li>
                 </ul>
-                <ul className='xl:flex flex-row justify-center gap-10'>
+                <ul className='md:flex flex-row justify-center gap-10'>
                     <li>
                         <strong>Flutter</strong>
                     </li>
@@ -78,7 +76,7 @@ const Technologies = () => {
                         Arduino
                     </li>
                 </ul>
-                <ul className='xl:flex flex-row justify-center gap-10'>
+                <ul className='md:flex flex-row justify-center gap-10'>
                     <li>
                         <strong>ASP.NET MVC</strong>
                     </li>
@@ -90,8 +88,7 @@ const Technologies = () => {
                     </li>
                 </ul>
             </div>
-            <Divider plain> <UpOutlined /> </Divider>
-        </Card>
+        </div>
     )
 }
 

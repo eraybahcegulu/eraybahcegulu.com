@@ -2,7 +2,7 @@ import { Steps } from 'antd';
 
 const Experience = () => {
     return (
-        <div>
+        <div className='hover:scale-125 transition-all font-bold hover:skew-y-6 mt-20 md:mt-0'>
             <h2 className='text-2xl font-bold'>EXPERIENCE</h2>
             <Steps
                 className='steps-experience'

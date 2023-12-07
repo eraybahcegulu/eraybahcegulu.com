@@ -6,8 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 
 body {
-  margin: 1%;
-  background-color: black;
+
+  background-color: rgb(114, 163, 212);
   font-family: 'Electrolize', sans-serif;
   display: flex;
   align-items: center;
@@ -35,14 +35,18 @@ body {
   font-family: 'Electrolize', sans-serif;
 }
 
+.ant-divider{
+  font-family: 'Electrolize', sans-serif;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-thumb{
-  background: #d1d5db;
+  background: #1d61c7;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #9ca3af;
+  background-color: #3074eb;
 }
