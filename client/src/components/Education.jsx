@@ -5,9 +5,10 @@ const Education = () => {
         <div className='hover:scale-125 transition-all font-bold hover:skew-y-6'>
             <h2 className='text-2xl font-bold'>EDUCATION</h2>
             <Steps
-                className='steps-education '
+                className='steps-education text-xs'
                 progressDot
                 current={3}
+                responsive={true}
                 direction="vertical"
                 items={[
                     {
@@ -24,6 +25,7 @@ const Education = () => {
                     },
                 ]}
             />
+            
         </div>
     )
 }
