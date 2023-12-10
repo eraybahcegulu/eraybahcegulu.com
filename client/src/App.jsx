@@ -1,7 +1,7 @@
 
-import HomePage from "./pages/HomePage.jsx"
-import YemekTarifleri from "./pages/privacy-pages/YemekTarifleri.jsx";
-import HesapMakinesi from "./pages/privacy-pages/HesapMakinesi.jsx";
+import HomePage from "./Pages/HomePage.jsx"
+import YemekTarifleri from "./Pages/privacy-pages/YemekTarifleri.jsx";
+import HesapMakinesi from "./Pages/privacy-pages/HesapMakinesi.jsx";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
